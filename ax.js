@@ -22,19 +22,12 @@ var typed = new Typed(".input",{
 })
 
 const img1 = document.getElementById("myImage");
-
-    // Function to handle image change with a smooth transition
     function changeImage(newSrc) {
-      // Apply zoom out effect (scaling down)
       img1.style.transform = 'scale(0.9)';
-
-      // After the zoom-out effect is complete (0.5s), change the image source
       setTimeout(() => {
         img1.src = newSrc;
-        
-        // After the image source is changed, apply the zoom-in effect
         img1.style.transform = 'scale(1)';
-      }, 500); // 500ms matches the transition duration for smoothness
+      }, 500);
     }
 
     img1.addEventListener("mousedown", function () {
